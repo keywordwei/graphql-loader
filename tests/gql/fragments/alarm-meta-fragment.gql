@@ -1,0 +1,15 @@
+fragment alarmMeta on AlarmMeta {
+  alarm_at
+  alarm_type
+  handler {
+    id
+  }
+  level
+  project
+  rule_name
+  rule_type
+  status
+  sub_project
+  suggestion
+  version
+}

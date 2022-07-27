@@ -1,0 +1,15 @@
+#import "./fragments/alarm-meta-fragment.gql"
+
+query AlarmList($limit: Int64, $offset: Int64, $filter: AstNode) {
+  alarm_list(limit: $limit, offset: $offset, filter: $filter) {
+    count
+    relation_entitys {
+      key {
+        id
+      }
+      meta {
+        ...alarmMeta
+      }
+    }
+  }
+}
